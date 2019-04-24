@@ -1,8 +1,5 @@
 <template>
   <v-layout column wrap align-center justify-start>
-    <v-flex my-5 class="display-1">
-        <span>Contact Info</span>
-    </v-flex>
     <v-flex>
       <iframe
         :src="contactForm.url"

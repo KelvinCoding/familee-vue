@@ -1,9 +1,6 @@
 <template>
   <div>
-    <iframe
-      :src="formUrl">
-      Loading...
-    </iframe>
+
   </div>
 </template>
 <script>

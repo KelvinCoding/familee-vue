@@ -1,12 +1,6 @@
 <template>
   <div>
     <v-layout justify-start column text-xs-center>
-      <v-flex>
-        <HappileeText />
-      </v-flex>
-      <v-flex my-5 class="display-1">
-        <span>Registry Information</span>
-      </v-flex>
       <v-flex v-show="isMounted">
         <v-layout v-bind="layoutBinding">
           <v-flex

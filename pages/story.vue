@@ -2,12 +2,6 @@
   <div>
     <v-layout justify-start column text-xs-center>
       <v-flex>
-        <HappileeText />
-      </v-flex>
-      <v-flex my-5 class="display-1">
-        <span>Our Story</span>
-      </v-flex>
-      <v-flex>
         <v-layout align-start justify-center row wrap>
           <v-flex xs12 md8 text-xs-left>
           <v-card>
