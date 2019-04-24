@@ -11,7 +11,7 @@
         <v-layout align-start justify-center row wrap>
           <v-flex xs12 md8 text-xs-left>
           <v-card>
-            <v-card-text>
+            <v-card-text class="subheading">
               <p>
                 Johanna and Kelvin met in July 2017 at Arthur Murray dance studio in Fort Worth, Texas. The two encountered each other in group classes and social dance parties, but it wasn’t until their mutual friend invited both of them to grab food and drinks after a social party that the two had time to talk between dance steps.
               </p>

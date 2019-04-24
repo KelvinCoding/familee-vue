@@ -2,6 +2,7 @@
   <v-app dark class="bg-gradient">
     <v-navigation-drawer
       v-model="drawer"
+      v-on:toolbar-drawer="drawerChangeHandler"
       :mini-variant="miniVariant"
       :clipped="clipped"
       fixed
@@ -24,25 +25,26 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar :clipped-left="clipped" fixed app>
-      <v-toolbar-side-icon @click="drawer = !drawer" />
-      <v-btn v-if="false" icon @click.stop="miniVariant = !miniVariant">
-        <v-icon>{{ `chevron_${miniVariant ? 'right' : 'left'}` }}</v-icon>
-      </v-btn>
-      <v-btn v-if="false" icon @click.stop="clipped = !clipped">
-        <v-icon>web</v-icon>
-      </v-btn>
-      <v-btn v-if="false" icon @click.stop="fixed = !fixed">
-        <v-icon>remove</v-icon>
-      </v-btn>
-      <v-toolbar-title v-text="title" />
-      <v-btn v-if="false" icon @click.stop="rightDrawer = !rightDrawer">
-        <v-icon>menu</v-icon>
-      </v-btn>
-    </v-toolbar>
+    <Toolbar />
     <v-content>
       <v-container fluid grid-list-xs>
-        <nuxt />
+        <v-layout column justify-start>
+          <v-flex>
+            <HappileeText />
+          </v-flex>
+          <v-flex>
+            <v-layout row wrap>
+              <v-flex v-for="(item, index) in items" :key="index">
+                <v-btn dark :to="item.to" nuxt>
+                  <v-icon>{{item.icon}}</v-icon>{{ item.Title }}
+                </v-btn>
+              </v-flex>
+            </v-layout>
+          </v-flex>
+          <v-flex>
+            <nuxt />
+          </v-flex>
+        </v-layout>
       </v-container>
     </v-content>
     <v-footer :fixed="fixed" app>
@@ -52,7 +54,13 @@
 </template>
 
 <script>
+import Toolbar from '~/components/main/Toolbar.vue'
+import HappileeText from '~/components/HappileeText.vue'
 export default {
+  components:{
+    Toolbar,
+    HappileeText
+  },
   data() {
     return {
       clipped: true,
@@ -121,6 +129,11 @@ export default {
           }
         },
         {
+          icon: '$vuetify.icons.edit',
+          title: 'Contact Us!',
+          to: '/contact'
+        },
+        {
           icon: '$vuetify.icons.welcome',
           title: 'Welcome',
           to: '/'
@@ -140,6 +153,11 @@ export default {
       right: true,
       rightDrawer: false,
       title: 'Vuetify.js'
+    }
+  },
+  methods: {
+    drawerChangeHandler() {
+      this.drawer = !this.drawer
     }
   }
 }

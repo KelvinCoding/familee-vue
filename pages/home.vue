@@ -21,7 +21,7 @@
       <v-flex mt-5 mb-5>
         <v-layout row justify-center>
           <v-flex v-for="(buttonData, index) in buttonInfo" :key="index" pa-1>
-            <v-btn color="pink" dark :to="buttonData.to" nuxt>
+            <v-btn dark :to="buttonData.to" nuxt>
               {{ buttonData.name }}
             </v-btn>
           </v-flex>
