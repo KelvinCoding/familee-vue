@@ -1,5 +1,5 @@
 <template>
-  <v-app dark>
+  <v-app dark class="bg-gradient">
     <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
@@ -45,18 +45,8 @@
         <nuxt />
       </v-container>
     </v-content>
-    <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
-      <v-list>
-        <v-list-tile @click.native="right = !right">
-          <v-list-tile-action>
-            <v-icon light>compare_arrows</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title>Switch drawer (click me)</v-list-tile-title>
-        </v-list-tile>
-      </v-list>
-    </v-navigation-drawer>
     <v-footer :fixed="fixed" app>
-      <span>&copy; 2019</span>
+      <span>&copy; 2019 - Kelvin Rodriguez</span>
     </v-footer>
   </v-app>
 </template>
@@ -70,35 +60,80 @@ export default {
       fixed: false,
       items: [
         {
-          icon: 'house',
+          icon: '$vuetify.icons.home',
           title: 'Home',
-          to: '/home'
+          to: '/home',
+          meta: {
+            crumbs: [{
+              text: 'Home',
+              disabled: false,
+              disabled: true
+            }]
+          }
         },
         {
-          icon: 'format_align_left',
+          icon: '$vuetify.icons.grin-hearts',
           title: 'Our Story',
-          to: '/story'
+          to: '/story',
+          meta: {
+            crumbs: [
+            {
+              text: 'Home',
+              to: '/home',
+              disabled: false
+            },
+            {
+              text:'Our Story',
+              disabled: true
+            }]
+          }
         },
 
         {
-          icon: 'group',
+          icon: '$vuetify.icons.users',
           title: 'Our Family',
-          to: '/family'
+          to: '/family',
+          meta: {
+            crumbs: [
+            {
+              text: 'Home',
+              to: '/home'
+            },
+            {
+              text:'Our Family',
+            }]
+          }
         },
         {
-          icon: 'card_giftcard',
+          icon: '$vuetify.icons.gifts',
           title: 'Registry',
-          to: '/registry'
+          to: '/registry',
+          meta: {
+            crumbs: [
+            {
+              text: 'Home',
+              disabled: false,
+              to: '/home'
+            },
+            {
+              text:'Registry',
+            }]
+          }
         },
         {
-          icon: 'apps',
+          icon: '$vuetify.icons.welcome',
           title: 'Welcome',
           to: '/'
         },
         {
-          icon: 'bubble_chart',
+          icon: '$vuetify.icons.lightbulb',
           title: 'Inspire',
           to: '/inspire'
+        },
+        {
+          icon: '$vuetify.icons.tools',
+          title: 'Testing',
+          to:'/test'
         }
       ],
       miniVariant: false,
@@ -109,3 +144,11 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.bg-gradient {
+  background: hsl(200, 10%, 10%) !important;
+  /* background: rgb(255,255,255) !important;
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(136,136,136,1) 71%, rgba(98,98,98,1) 100%) !important; */
+}
+</style>

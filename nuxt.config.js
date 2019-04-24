@@ -24,6 +24,14 @@ export default {
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?family=Roboto Mono'
+      },
+      {
+        rel: 'stylesheet',
+        href:'https://fonts.googleapis.com/css?family=Unica+One'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Calligraffitti'
       }
     ]
   },

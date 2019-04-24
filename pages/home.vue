@@ -1,23 +1,21 @@
 <template>
   <div v-show="isFinishedMounting">
-    <v-layout column wrap justify-space-around fill-height text-xs-center>
-      <v-flex class="display-3 text-uppercase force-monospace">
-        <transition name="fade" mode="out-in">
-          <span v-if="shouldChangeName" key="2"
-            >{{ names.transitionToText }}
-          </span>
-          <span v-else key="1">{{ names.default }}</span>
-        </transition>
-        <span>Ever After</span>
+    <v-layout justify-start column text-xs-center>
+      <v-flex></v-flex>
+      <v-flex>
+        <HappileeText />
       </v-flex>
-      <v-flex mt-5 class="title">
+      <v-flex mt-5 class="display-2 font-cursive">
+        <span>Johanna & Kelvin</span>
+        <span>Lee</span>
+      </v-flex>
+      <v-flex class="title">
         <p>
-          <v-icon>calendar_today</v-icon>
-          June 7th, 2019
-        </p>
-        <p>
-          <v-icon>location_city</v-icon>
+          <v-icon v-text="'$vuetify.icons.city'"></v-icon>
           Fort Worth, Texas
+        </p>
+        <p class="subheading">
+          Additional Details Coming Soon!
         </p>
       </v-flex>
       <v-flex mt-5 mb-5>
@@ -46,8 +44,13 @@
   </div>
 </template>
 <script>
+
+import HappileeText from '~/components/HappileeText.vue'
+
 export default {
-  components: {},
+  components: {
+    HappileeText
+  },
   data() {
     return {
       isFinishedMounting: false,
@@ -98,6 +101,11 @@ export default {
     }
   },
   computed: {
+    isSmallScreen() {
+      return this.isFinishedMounting
+        ? !this.$vuetify.breakpoint.mdAndUp
+        : true
+    },
     layoutBinding() {
       const isBig = this.isFinishedMounting
         ? this.$vuetify.breakpoint.mdAndUp
@@ -132,6 +140,11 @@ export default {
   font-family: 'Roboto Mono', monospace !important;
 }
 
+.font-cursive {
+  font-family: 'Calligraffitti', cursive !important;
+}
+
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s;
@@ -140,4 +153,6 @@ export default {
 .fade-leave-to {
   opacity: 0;
 }
+
+
 </style>
