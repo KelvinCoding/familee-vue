@@ -27,7 +27,7 @@ export default {
       },
       {
         rel: 'stylesheet',
-        href:'https://fonts.googleapis.com/css?family=Unica+One'
+        href: 'https://fonts.googleapis.com/css?family=Unica+One'
       },
       {
         rel: 'stylesheet',

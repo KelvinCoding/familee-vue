@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  props:{
+  props: {
     miniVariant: {
       type: Boolean,
       required: false,
@@ -24,12 +24,10 @@ export default {
   },
   methods: {
     drawerChangeEvent(event) {
-      this.$emit('toolbar-drawer');
+      this.$emit('toolbar-drawer')
     }
   }
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

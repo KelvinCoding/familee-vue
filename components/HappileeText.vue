@@ -5,7 +5,8 @@
       md6
       py-5
       text-xs-center
-      class="display-3 border-y-1-solid border-color-teal font-cursive">
+      class="display-3 border-y-1-solid border-color-teal font-cursive"
+    >
       <transition name="fade" mode="out-in">
         <div v-if="shouldChangeName" key="2">
           <span>
@@ -64,10 +65,7 @@ export default {
   border-color: hsl(200, 40%, 80%);
 }
 
-
 .light-font-color {
   color: hsl(200, 40%, 80%);
 }
-
 </style>
-

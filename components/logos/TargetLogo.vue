@@ -1,6 +1,7 @@
 <template>
   <div>
     <svg
+      id="svg2"
       xmlns:dc="http://purl.org/dc/elements/1.1/"
       xmlns:cc="http://creativecommons.org/ns#"
       xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -10,7 +11,6 @@
       height="80.613335"
       width="322.06668"
       xml:space="preserve"
-      id="svg2"
       version="1.1"
       style="height: 5vmax; width:20vmax"
     >
@@ -18,13 +18,15 @@
         <rdf:RDF>
           <cc:Work rdf:about>
             <dc:format>image/svg+xml</dc:format>
-            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type>
+            <dc:type
+              rdf:resource="http://purl.org/dc/dcmitype/StillImage"
+            ></dc:type>
           </cc:Work>
         </rdf:RDF>
       </metadata>
       <defs id="defs6"></defs>
-      <g transform="matrix(1.3333333,0,0,-1.3333333,0,80.613333)" id="g10">
-        <g transform="scale(0.1)" id="g12">
+      <g id="g10" transform="matrix(1.3333333,0,0,-1.3333333,0,80.613333)">
+        <g id="g12" transform="scale(0.1)">
           <path
             id="path14"
             style="fill:#ed192d;fill-opacity:1;fill-rule:nonzero;stroke:none"

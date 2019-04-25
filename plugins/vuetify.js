@@ -17,14 +17,14 @@ Vue.use(Vuetify, {
   },
   iconfont: 'fa',
   icons: {
-    'gem': 'fas fa-gem',
-    'city': 'fas fa-city',
-    'home': 'fas fa-home',
+    gem: 'fas fa-gem',
+    city: 'fas fa-city',
+    home: 'fas fa-home',
     'grin-hearts': 'fas fa-grin-hearts',
-    'users': 'fas fa-users',
-    'lightbulb': 'fas fa-lightbulb',
-    'tools': 'fas fa-tools',
-    'gifts': 'fas fa-gifts',
-    'welcome': 'fas fa-door-open'
+    users: 'fas fa-users',
+    lightbulb: 'fas fa-lightbulb',
+    tools: 'fas fa-tools',
+    gifts: 'fas fa-gifts',
+    welcome: 'fas fa-door-open'
   }
 })

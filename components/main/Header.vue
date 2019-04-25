@@ -17,24 +17,15 @@
       </p>
     </v-flex>
     <v-flex mt-3 mb-5>
-      <v-layout
-        v-show="IsBig"
-        align-start
-        justify-center
-        row
-        wrap
-      >
+      <v-layout v-show="IsBig" align-start justify-center row wrap>
         <v-flex
           v-for="(item, index) in items"
           :key="index"
           text-xs-center
           shrink
         >
-          <v-btn
-          :to="item.to"
-          outline
-            nuxt>
-            <span>{{item.title}}</span>
+          <v-btn :to="item.to" outline nuxt>
+            <span>{{ item.title }}</span>
           </v-btn>
         </v-flex>
       </v-layout>
@@ -43,9 +34,10 @@
         :return-object="true"
         :items="items"
         item-text="title"
-        v-on:change="dropdownSelect"
-        label="Home"
-        >
+        label="Navigation"
+        outline
+        @change="dropdownSelect"
+      >
       </v-overflow-btn>
     </v-flex>
   </div>
@@ -55,7 +47,7 @@
 import HappileeText from '~/components/HappileeText.vue'
 
 export default {
-  components:{
+  components: {
     HappileeText
   },
   data() {
@@ -65,13 +57,14 @@ export default {
         {
           icon: '$vuetify.icons.home',
           title: 'Home',
-          to: '/home',
+          to: '/',
           meta: {
-            crumbs: [{
-              text: 'Home',
-              disabled: false,
-              disabled: true
-            }]
+            crumbs: [
+              {
+                text: 'Home',
+                disabled: false
+              }
+            ]
           }
         },
         {
@@ -80,15 +73,16 @@ export default {
           to: '/story',
           meta: {
             crumbs: [
-            {
-              text: 'Home',
-              to: '/home',
-              disabled: false
-            },
-            {
-              text:'Our Story',
-              disabled: true
-            }]
+              {
+                text: 'Home',
+                to: '/',
+                disabled: false
+              },
+              {
+                text: 'Our Story',
+                disabled: true
+              }
+            ]
           }
         },
 
@@ -113,14 +107,15 @@ export default {
           to: '/registry',
           meta: {
             crumbs: [
-            {
-              text: 'Home',
-              disabled: false,
-              to: '/home'
-            },
-            {
-              text:'Registry',
-            }]
+              {
+                text: 'Home',
+                disabled: false,
+                to: '/home'
+              },
+              {
+                text: 'Registry'
+              }
+            ]
           }
         },
         {
@@ -137,13 +132,13 @@ export default {
       return this.isMounted ? this.$vuetify.breakpoint.mdAndUp : false
     }
   },
+  mounted() {
+    this.isMounted = true
+  },
   methods: {
-    dropdownSelect(value){
+    dropdownSelect(value) {
       this.$router.push(value.to)
     }
-  },
-  mounted(){
-    this.isMounted = true;
   }
 }
 </script>
@@ -157,5 +152,4 @@ export default {
   border-top: 1px solid;
   border-bottom: 1px solid;
 }
-
 </style>
