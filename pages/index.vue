@@ -2,7 +2,7 @@
   <div>
     <v-layout justify-start column text-xs-center>
       <v-flex>
-        <v-carousel height="90%" hide-delimiters v-if="false">
+        <v-carousel v-if="false" height="90%" hide-delimiters>
           <v-carousel-item v-for="(i, index1) in carouselImages" :key="index1">
             <v-layout row align-center fill-height>
               <v-flex v-for="(j, index2) in i.groupImageSrc" :key="index2">
@@ -11,9 +11,9 @@
             </v-layout>
           </v-carousel-item>
         </v-carousel>
-        <v-carousel height="90%" hide-delimiters v-else :interval="9000000">
+        <v-carousel v-else height="90%" hide-delimiters :interval="9000000">
           <v-carousel-item v-for="(i, index1) in carouselImages" :key="index1">
-            <ImagePopup :imageSources="i.groupImageSrc" />
+            <ImagePopup :image-sources="i.groupImageSrc" />
           </v-carousel-item>
         </v-carousel>
       </v-flex>
@@ -25,7 +25,7 @@
 import ImagePopup from '~/components/main/ImagePopup.vue'
 
 export default {
-  components:{
+  components: {
     ImagePopup
   },
   data() {
@@ -51,26 +51,20 @@ export default {
           ]
         },
         {
-          groupImageSrc:[
-            '/together/PANO_20180822_234510.jpg',
-          ]
+          groupImageSrc: ['/together/PANO_20180822_234510.jpg']
         },
         {
-          groupImageSrc:[
-            '/together/IMG_20180826_123158.jpg',
-          ]
+          groupImageSrc: ['/together/IMG_20180826_123158.jpg']
         },
         {
-          groupImageSrc:[
+          groupImageSrc: [
             '/together/IMG_20181020_150656.jpg',
             '/together/MVIMG_20180214_214734.jpg',
             '/together/2018-dance-together.jpg'
           ]
         },
         {
-          groupImageSrc:[
-            '/together/IMG_20190329_125026.jpg'
-          ]
+          groupImageSrc: ['/together/IMG_20190329_125026.jpg']
         }
       ]
     }

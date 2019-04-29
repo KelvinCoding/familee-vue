@@ -1,23 +1,15 @@
 <template>
   <v-layout row justify-center align-center>
-    <v-layout row justify-center slot="activator">
-      <v-flex v-for="(item, index) in imageSources" :key="index" >
-          <v-img
-          @click="dialog = true"
-          :src="item"
-          max-height="80vh"
-          contain/>
+    <v-layout slot="activator" row justify-center>
+      <v-flex v-for="(item, index) in imageSources" :key="index">
+        <v-img :src="item" max-height="80vh" contain @click="dialog = true" />
       </v-flex>
     </v-layout>
     <v-dialog v-model="dialog" persistent>
       <v-card>
         <v-layout row justify-center>
-          <v-flex
-            v-for="(item, index) in imageSources" :key="index"
-          >
-            <v-img @click="dialog = false"
-              :src="item"
-            />
+          <v-flex v-for="(item, index) in imageSources" :key="index">
+            <v-img :src="item" @click="dialog = false" />
           </v-flex>
         </v-layout>
       </v-card>
@@ -27,7 +19,7 @@
 
 <script>
 export default {
-  props:{
+  props: {
     imageSources: {
       type: Array,
       required: true
@@ -37,10 +29,8 @@ export default {
     return {
       dialog: false
     }
-  },
+  }
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

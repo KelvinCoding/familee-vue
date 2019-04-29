@@ -49,10 +49,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [
-    '@/plugins/vuetify',
-    '@/plugins/vue-viewer'
-  ],
+  plugins: ['@/plugins/vuetify', '@/plugins/vue-viewer'],
 
   /*
    ** Nuxt.js modules

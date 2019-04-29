@@ -7,12 +7,13 @@
             <v-card>
               <v-card-text class="subheading">
                 <p>
-                  Johanna and Kelvin met in July 2017 at Arthur Murray dance
-                  studio in Fort Worth, Texas. The two encountered each other in
-                  group classes and social dance parties, but it wasn’t until
-                  their mutual friend invited both of them to grab food and
-                  drinks after a social party that the two had time to talk
-                  between dance steps.
+                  Johanna and Kelvin met while doing what they both
+                  loved--dancing-- in July 2017 at Arthur Murray dance studio in
+                  Fort Worth, Texas. The two encountered each other in group
+                  classes and social dance parties, but it wasn’t until their
+                  mutual friend invited both of them to grab food and drinks
+                  after a social party that the two had time to talk between
+                  dance steps.
                 </p>
                 <p>
                   From there, they became unofficial dance partners and got to
@@ -43,6 +44,10 @@
                 </ul>
                 <br />
                 <p>
+                  Together the two have found the perfect partnership in all
+                  things-- dance, programming, and love.
+                </p>
+                <p>
                   In late March of 2019, Kelvin scheduled a trip with some
                   friend and Johanna’s sister to Harry Potter World in
                   Hollywood, California. It was only appropriate to propose to a
@@ -61,7 +66,7 @@
 export default {
   data() {
     return {
-      carouselImages:[
+      carouselImages: [
         '/together/PANO_20180822_234510.jpg',
         '/together/IMG_20180826_123158.jpg',
         '/together/IMG_20181020_150656.jpg',
@@ -69,6 +74,6 @@ export default {
         '/together/2018-dance-together.jpg'
       ]
     }
-  },
+  }
 }
 </script>
