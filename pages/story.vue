@@ -57,3 +57,18 @@
     </v-layout>
   </div>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      carouselImages:[
+        '/together/PANO_20180822_234510.jpg',
+        '/together/IMG_20180826_123158.jpg',
+        '/together/IMG_20181020_150656.jpg',
+        '/together/MVIMG_20180214_214734.jpg',
+        '/together/2018-dance-together.jpg'
+      ]
+    }
+  },
+}
+</script>
