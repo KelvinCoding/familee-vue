@@ -8,7 +8,7 @@
               <v-card-text class="subheading">
                 <p>
                   Johanna and Kelvin met while doing what they both
-                  loved--dancing-- in July 2017 at Arthur Murray dance studio in
+                  loved&mdash;dancing&mdash;in July 2017 at Arthur Murray dance studio in
                   Fort Worth, Texas. The two encountered each other in group
                   classes and social dance parties, but it wasn’t until their
                   mutual friend invited both of them to grab food and drinks
@@ -45,7 +45,7 @@
                 <br />
                 <p>
                   Together the two have found the perfect partnership in all
-                  things-- dance, programming, and love.
+                  things&mdash; dance, programming, and love.
                 </p>
                 <p>
                   In late March of 2019, Kelvin scheduled a trip with some
@@ -55,9 +55,16 @@
                   entrance. She said “of course”, and here we are now.
                 </p>
               </v-card-text>
+              <v-card-title text-xs-center>
+              <v-layout align-center justify-center row fill-height>
+                    <iframe flex style="min-width: 60vw; min-height: 34vw; max-width:90vw; max-height:51vw" src="https://www.youtube-nocookie.com/embed/_fsS3nz4gR8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </v-layout>
+              </v-card-title>
             </v-card>
           </v-flex>
         </v-layout>
+      </v-flex>
+      <v-flex xs12>
       </v-flex>
     </v-layout>
   </div>
